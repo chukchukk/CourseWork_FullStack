@@ -1,0 +1,19 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+                   logicalFilePath="/database/changelog/0001-init-user-table.xml">
+
+    <changeSet id="init users table" author="dponomarev">
+        <createTable tableName="users">
+            <column name="ID" remarks="Identifier" type="NUMBER(19, 0)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column type="varchar" name="email" />
+            <column type="varchar" name="full_name" />
+            <column type="varchar" name="telephone_number" />
+            <column type="varchar" name="password" />
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,18 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+                   logicalFilePath="/database/changelog/0003-init-refresh-token-table.xml">
+
+    <changeSet id="init PROJECT_USER table" author="dponomarev">
+        <createTable tableName="PROJECT_USER">
+            <column type="NUMBER(19, 0)" name="PROJECT_ID">
+                <constraints foreignKeyName="PROJECT_ID" references="PROJECT(ID)" />
+            </column>
+            <column type="NUMBER(19, 0)" name="USER_ID">
+                <constraints foreignKeyName="USER_ID" references="USERS(ID)" />
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

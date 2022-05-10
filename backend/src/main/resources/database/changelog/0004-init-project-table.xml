@@ -1,0 +1,25 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+                   logicalFilePath="/database/changelog/0004-init-project-table.xml">
+
+    <changeSet id="init PROJECT table" author="dponomarev">
+        <createTable tableName="PROJECT">
+            <column name="ID" remarks="Identifier" type="NUMBER(19, 0)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column type="varchar" name="NAME"/>
+            <column type="varchar" name="CODE" />
+            <column type="varchar" name="TYPE" />
+            <column type="NUMBER(19, 0)" name="CREATOR_USER_ID">
+                <constraints foreignKeyName="CREATOR_USER_ID" references="USERS(ID)" />
+            </column>
+            <column type="TIMESTAMP(6)" name="CREATED_DATE" />
+            <column type="TIMESTAMP(6)" name="LAST_UPDATED_DATE" />
+            <column type="boolean" name="ACTIVE" />
+            <column type="varchar" name="DESCRIPTION" />
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
