@@ -1,6 +1,7 @@
 package com.cw6.ponomarev.model.entity;
 
 import com.cw6.ponomarev.model.enumeration.Role;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -36,7 +37,8 @@ public class UserEntity extends BaseEntity implements UserDetails {
 	@Enumerated(EnumType.STRING)
 	private Set<Role> roles;
 
-	@ManyToMany(mappedBy = "users")
+	@JsonIgnore
+	@ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
 	private Set<Project> projects = new HashSet<>();
 
 	@Override

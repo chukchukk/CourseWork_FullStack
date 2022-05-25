@@ -4,11 +4,14 @@ import {Button, Form, Modal, NavDropdown} from "react-bootstrap";
 import {Context} from "../../index";
 import {useFormik} from "formik";
 import * as yup from "yup";
+import SnackbarConstructor from "../snackbar/SnackbarConstructor";
+import {useNavigate} from "react-router";
 
 const CreateProject = observer(() => {
     const { projectStore } = useContext(Context)
     const [show, setShow] = useState(false)
     const [types, setTypes] =useState([])
+    const navigate = useNavigate();
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -16,15 +19,15 @@ const CreateProject = observer(() => {
     useEffect(() => {
             projectStore.getProjectTypes().then(r => {
                 setTypes(r.data)
-                console.log(types)
             })
         }, []
     )
+
     const formik = useFormik({
         initialValues: {
             name: "",
             code: "",
-            type: types[0],
+            type: 'Бизнес',
             description: ""
         },
         validateOnChange: true,
@@ -39,7 +42,14 @@ const CreateProject = observer(() => {
                 .required("Это поле обязательно")
         }),
         onSubmit: (values => {
-            projectStore?.createProject(values.name, values.code, values.type, values.description)
+            projectStore.createProject(values.name, values.code, values.type, values.description)
+                .then(() => {
+                    setShow(false)
+                    navigate('/projects')
+                    SnackbarConstructor('alertAfterCreateProject', 'success', 'Проект был создан.')
+                }).catch(() => {
+                    SnackbarConstructor('alertAfterCreateProject', 'warning', 'Проект с таким кодом уже существует.')
+            })
         })
     })
 
@@ -49,6 +59,7 @@ const CreateProject = observer(() => {
                 Создать проект
             </NavDropdown.Item>
 
+            <div id={'alertAfterCreateProject'} />
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Создание проекта</Modal.Title>
@@ -82,6 +93,7 @@ const CreateProject = observer(() => {
                                 onChange={formik.handleChange}
                                 value={formik.values.type}
                             >
+                                <option disabled={true}>Выбрать</option>
                                 {
                                     types.map(x => {
                                         return <option key={x} value={x}>{x}</option>

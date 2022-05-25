@@ -19,7 +19,7 @@ export default function HeaderNav () {
                         {
                             userStore.isAuth ?
                                 <Nav className="me-auto">
-                                    <Nav.Link as={Link} to="/features">Рабочий стол</Nav.Link>
+                                    <Nav.Link as={Link} to="/">Рабочий стол</Nav.Link>
                                     <NavDropdown
                                         title="Проект"
                                         menuVariant="dark"

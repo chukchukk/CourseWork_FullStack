@@ -1,6 +1,8 @@
 package com.cw6.ponomarev.service;
 
+import com.cw6.ponomarev.mapper.UserEntityMapper;
 import com.cw6.ponomarev.model.dto.RegistrationDTO;
+import com.cw6.ponomarev.model.dto.UserDTO;
 import com.cw6.ponomarev.model.entity.UserEntity;
 import com.cw6.ponomarev.model.enumeration.Role;
 import com.cw6.ponomarev.repository.UserEntityRepository;
@@ -20,6 +22,8 @@ public class UserService {
 
 	private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
+	private final UserEntityMapper userEntityMapper;
+
 	public void addNewUser(RegistrationDTO dto) {
 		Optional<UserEntity> dbUserByEmail = userRepository.findByEmailOrTelephoneNumber(
 				dto.getEmail(),
@@ -36,6 +40,10 @@ public class UserService {
 		} else {
 			throw new UnsupportedOperationException();
 		}
+	}
+
+	public UserDTO getCurrentUserInfo(UserEntity userEntity) {
+		return userEntityMapper.userEntityToUserDTO(userEntity);
 	}
 
 }

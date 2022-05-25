@@ -3,6 +3,8 @@ import ProjectService from "../services/ProjectService";
 
 export default class ProjectStore {
 
+    currentProjectId = 0
+
     constructor() {
         makeAutoObservable(this)
     }
@@ -15,6 +17,22 @@ export default class ProjectStore {
 
     createProject(name, code, type, description) {
         return ProjectService.createProject(name, code, type, description)
+    }
+
+    getOpenProjects() {
+        return ProjectService.getOpenProjects()
+    }
+
+    getUserProject() {
+        return ProjectService.getUserProjects()
+    }
+
+    getAvailableUsersForProject(projectId) {
+        return ProjectService.getAvailableUsersForProject(projectId)
+    }
+
+    addNewUser(projectId, userId) {
+        return ProjectService.addNewUser(projectId, userId)
     }
 
 }

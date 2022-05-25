@@ -1,0 +1,13 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+                   logicalFilePath="/database/changelog/0006-add-status-column-project.xml">
+
+    <changeSet id="add status column project table" author="dponomarev">
+        <addColumn tableName="project">
+            <column type="varchar" name="status" />
+        </addColumn>
+    </changeSet>
+
+</databaseChangeLog>

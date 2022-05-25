@@ -6,6 +6,7 @@ import * as yup from "yup";
 import {observer} from "mobx-react-lite";
 import {useNavigate} from "react-router";
 import {Context} from "../../index";
+import SnackbarConstructor from "../snackbar/SnackbarConstructor";
 
 
 const RegistrationPage = observer(() => {
@@ -34,7 +35,11 @@ const RegistrationPage = observer(() => {
         onSubmit: (values => {
             userStore?.registration(values.fullName, values.email, values.telephoneNumber, values.password)
                 .then(() => {
+                    SnackbarConstructor('alertAfterRegistration', 'success', 'Success!')
                     navigate("/login")
+                })
+                .catch(() => {
+                    SnackbarConstructor('alertAfterRegistration', 'error', 'Что-то пошло не так.')
                 })
         })
     })

@@ -1,5 +1,43 @@
 
-O
-frontend/client/src/App.test.js,7\a\7a174b0164ffea553bebada6365a3a7ad17c147d
+@
+frontend/pom.xml,d\6\d6193ec3edfd8c416bb7a1164257c50166469ff6
+q
+Afrontend/client/src/components/auth/style/Registration.module.css,6\2\621c66ddbff80b3b8ac0e256a681f8c69b26803e
+K
+frontend/client/src/App.css,7\2\728aa532239cb2ac7a6f386fcae184dcc122156e
 M
 frontend/client/src/index.css,5\2\524b091546f825698dcb6a7e961ebcbc81ccf2dd
+T
+$frontend/client/public/manifest.json,6\c\6c232ef2eaeee14e0739ea22129eeaecbc760c0c
+Q
+!frontend/client/public/robots.txt,9\2\92301c81f50b32cef905a7be2d44fe3ab83f7560
+O
+frontend/client/src/App.test.js,7\a\7a174b0164ffea553bebada6365a3a7ad17c147d
+Q
+!frontend/client/public/index.html,8\5\85a23855025134055155172cdf7f29112d4fbb52
+`
+0frontend/client/src/components/auth/LoginPage.js,4\4\44582b7644eb5dcd748db5d2809714119a368fe6
+L
+frontend/client/src/logo.svg,2\e\2e605f5150a5298adf1ebe9b3b70bfd15bd5ec8b
+V
+&frontend/client/src/reportWebVitals.js,f\c\fcedaf8e8b50d3660eaa8c370acbc09d3f5d75a6
+Q
+!frontend/client/src/setupTests.js,8\6\86f5d76a4c1b4e4eb26b5e771727cd8d07b9745f
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+`
+0frontend/client/src/configuration/AxiosConfig.js,4\d\4d72330dc1b3a65cdfd12150f2ee2ac862c74a73
+B
+backend/.gitignore,7\e\7e16691a9fc60084a157565ec422c8094d3df67c
+|
+Lbackend/src/main/java/com/cw6/ponomarev/security/UserDetailsServiceImpl.java,4\9\491cc5e8e6394f9f5c5db94e9fb72d3b3bb3be2e
+z
+Jbackend/src/main/java/com/cw6/ponomarev/model/enumeration/ProjectType.java,a\a\aa361175537e685cbf3366c2b4bc5cda77337706
+q
+Abackend/src/main/java/com/cw6/ponomarev/PonomarevApplication.java,7\c\7cd4e3c5374444f485e155bec171964c726765a0
+w
+Gbackend/src/main/java/com/cw6/ponomarev/security/WebSecurityConfig.java,f\8\f857ffb8b58e1923754d49d551e4f14dfee92e07
+[
++frontend/client/src/services/AuthService.js,f\1\f15c4ee52a90a4a70474e25473a5ee7dd87ea4eb
+_
+/frontend/client/src/components/footer/Footer.js,b\d\bd4f5cc7e150a46b6976c4de9f858beb94cda3c6

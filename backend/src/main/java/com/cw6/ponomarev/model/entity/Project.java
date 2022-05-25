@@ -1,5 +1,6 @@
 package com.cw6.ponomarev.model.entity;
 
+import com.cw6.ponomarev.model.enumeration.ProjectStatus;
 import com.cw6.ponomarev.model.enumeration.ProjectType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,6 +26,9 @@ public class Project extends BaseEntity {
 
 	@Enumerated(EnumType.STRING)
 	private ProjectType type;
+
+	@Enumerated(EnumType.STRING)
+	private ProjectStatus status;
 
 	@ManyToOne
 	@JoinColumn(name = "CREATOR_USER_ID")

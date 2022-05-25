@@ -9,4 +9,21 @@ export default class ProjectService {
     static createProject(name, code, type, description) {
         return $api.post("/projects/create", {name, code, type, description})
     }
+
+    static getOpenProjects() {
+        return $api.get('/projects')
+    }
+
+    static getUserProjects() {
+        return $api.get('/projects/currentUserProjects')
+    }
+
+    static getAvailableUsersForProject(projectId) {
+        return $api.get('/projects/availableUsers', {params: {projectId: projectId}})
+    }
+
+    static addNewUser(projectId, userId) {
+        return $api.post('/projects/addNewUser', {projectId, userId},{params: {projectId, userId}})
+    }
+
 }
