@@ -1,5 +1,4 @@
 import HeaderNav from "./components/header/HeaderNav";
-import Footer from "./components/footer/Footer";
 import Content from "./components/content/Content";
 import './App.css';
 

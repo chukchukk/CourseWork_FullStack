@@ -5,6 +5,7 @@ import {useContext} from "react";
 import {Context} from "../../index";
 import {useNavigate} from "react-router";
 import CreateProject from "../project/CreateProject";
+import CreateOrder from "../order/CreateOrder";
 
 export default function HeaderNav () {
     const {userStore} = useContext(Context)
@@ -19,7 +20,7 @@ export default function HeaderNav () {
                         {
                             userStore.isAuth ?
                                 <Nav className="me-auto">
-                                    <Nav.Link as={Link} to="/">Рабочий стол</Nav.Link>
+                                    <Nav.Link as={Link} to="/workSpace">Рабочий стол</Nav.Link>
                                     <NavDropdown
                                         title="Проект"
                                         menuVariant="dark"
@@ -27,13 +28,7 @@ export default function HeaderNav () {
                                         <NavDropdown.Item as={CreateProject} />
                                         <NavDropdown.Item as={Link} to="/projects">Список проектов</NavDropdown.Item>
                                     </NavDropdown>
-                                    <NavDropdown
-                                        title="Задачи"
-                                        menuVariant="dark"
-                                    >
-                                        <NavDropdown.Item href="#action/3.1">Создать задачу</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.2">Список задач</NavDropdown.Item>
-                                    </NavDropdown>
+                                    <Nav.Link as={Link} to="/orders">Список задач</Nav.Link>
                                 </Nav>
                                 : null
                         }

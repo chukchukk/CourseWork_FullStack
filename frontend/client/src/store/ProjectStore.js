@@ -35,4 +35,7 @@ export default class ProjectStore {
         return ProjectService.addNewUser(projectId, userId)
     }
 
+    deleteUserFromProject(projectId, userId) {
+        return ProjectService.deleteUserFromProject(projectId, userId)
+    }
 }

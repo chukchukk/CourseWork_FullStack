@@ -5,8 +5,6 @@ q
 Afrontend/client/src/components/auth/style/Registration.module.css,6\2\621c66ddbff80b3b8ac0e256a681f8c69b26803e
 K
 frontend/client/src/App.css,7\2\728aa532239cb2ac7a6f386fcae184dcc122156e
-M
-frontend/client/src/index.css,5\2\524b091546f825698dcb6a7e961ebcbc81ccf2dd
 T
 $frontend/client/public/manifest.json,6\c\6c232ef2eaeee14e0739ea22129eeaecbc760c0c
 Q
@@ -15,8 +13,6 @@ O
 frontend/client/src/App.test.js,7\a\7a174b0164ffea553bebada6365a3a7ad17c147d
 Q
 !frontend/client/public/index.html,8\5\85a23855025134055155172cdf7f29112d4fbb52
-`
-0frontend/client/src/components/auth/LoginPage.js,4\4\44582b7644eb5dcd748db5d2809714119a368fe6
 L
 frontend/client/src/logo.svg,2\e\2e605f5150a5298adf1ebe9b3b70bfd15bd5ec8b
 V
@@ -41,3 +37,19 @@ Gbackend/src/main/java/com/cw6/ponomarev/security/WebSecurityConfig.java,f\8\f8
 +frontend/client/src/services/AuthService.js,f\1\f15c4ee52a90a4a70474e25473a5ee7dd87ea4eb
 _
 /frontend/client/src/components/footer/Footer.js,b\d\bd4f5cc7e150a46b6976c4de9f858beb94cda3c6
+Q
+!frontend/client/package-lock.json,6\3\6334a36490fd35df99df1e82f3b96c407d2f3050
+L
+frontend/client/package.json,0\5\05e79a17a31d1f70b84b2df6369ba436ffe82a7c
+?
+backend/pom.xml,f\9\f9590cd73598b6f2427c8b1327d922c50d1dc504
+I
+frontend/client/README.md,7\1\713af0ef9e0863aa512ac68dd09765f6178616a3
+l
+<frontend/client/src/components/snackbar/SnackbarComponent.js,2\c\2cef647e56d910de261e401a109effcc65deefba
+n
+>frontend/client/src/components/snackbar/SnackbarConstructor.js,b\c\bcd8747e46113833961215f53e264a6083077367
+[
++frontend/client/src/services/UserService.js,7\b\7b9f2d9f5bd01d5c7d9deb12f7116279cb1d6bb4
+V
+&frontend/client/src/store/UserStore.js,2\d\2dfd4efd5aef2a6629e7462720fe908d4df37b5f

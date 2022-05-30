@@ -1,7 +1,6 @@
 package com.cw6.ponomarev.service;
 
 import com.cw6.ponomarev.mapper.ProjectMapper;
-import com.cw6.ponomarev.mapper.ProjectMapperImpl;
 import com.cw6.ponomarev.mapper.UserEntityMapper;
 import com.cw6.ponomarev.model.dto.CreateProjectDTO;
 import com.cw6.ponomarev.model.dto.ProjectDTO;
@@ -62,7 +61,7 @@ public class ProjectService {
 	}
 
 	public List<ProjectDTO> getProjectsByUser(UserEntity user) {
-		return projectRepository.findAllByCreatorUser(user).stream()
+		return projectRepository.findAllByUsersContains(user).stream()
 				.map(pr -> projectMapper.projectEntityToProjectDTO(pr, userEntityMapper))
 				.collect(Collectors.toList());
 	}
@@ -78,6 +77,13 @@ public class ProjectService {
 	public void addNewUser(Long projectId, Long userId) {
 		Project project = projectRepository.getById(projectId);
 		project.getUsers().add(userEntityRepository.getById(userId));
+		projectRepository.save(project);
+	}
+
+	public void deleteUser(Long projectId, Long userId) {
+		Project project = projectRepository.findById(projectId).orElseThrow();
+		UserEntity userEntity = userEntityRepository.findById(userId).orElseThrow();
+		project.getUsers().remove(userEntity);
 		projectRepository.save(project);
 	}
 }

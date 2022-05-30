@@ -34,7 +34,6 @@ const ProjectList = observer(() => {
                 <Button color={"primary"} onClick={() => {
                     setCurrentProject(params.row)
                     setShow(true)
-                    console.log(currentProject)
                 }}>
                     Просмотр
                 </Button>

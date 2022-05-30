@@ -1,0 +1,15 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+                   logicalFilePath="/database/changelog/0008-add-project-id-column-orders.xml">
+
+   <changeSet id="add PROJECT_ID column ORDERS table" author="dponomarev">
+       <addColumn tableName="orders">
+           <column type="NUMBER(19, 0)" name="PROJECT_ID">
+               <constraints foreignKeyName="PROJECT_ID" references="PROJECT(ID)" />
+           </column>
+       </addColumn>
+   </changeSet>
+
+</databaseChangeLog>

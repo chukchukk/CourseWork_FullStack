@@ -63,6 +63,11 @@ public class ProjectController {
 		return ResponseEntity.ok(null);
 	}
 
-
+	@PostMapping("/deleteUser")
+	public ResponseEntity<Void> deleteUser(@RequestParam("projectId") Long projectId,
+									 @RequestParam("userId") Long userId) {
+		projectService.deleteUser(projectId, userId);
+		return ResponseEntity.ok(null);
+	}
 
 }

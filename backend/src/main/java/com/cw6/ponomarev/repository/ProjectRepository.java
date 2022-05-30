@@ -17,4 +17,6 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
 
 	List<Project> findAllByCreatorUser(UserEntity user);
 
+	List<Project> findAllByUsersContains(UserEntity user);
+
 }

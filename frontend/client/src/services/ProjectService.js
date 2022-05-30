@@ -26,4 +26,8 @@ export default class ProjectService {
         return $api.post('/projects/addNewUser', {projectId, userId},{params: {projectId, userId}})
     }
 
+    static deleteUserFromProject(projectId, userId) {
+        return $api.post('/projects/deleteUser', {projectId, userId},{params: {projectId, userId}})
+    }
+
 }

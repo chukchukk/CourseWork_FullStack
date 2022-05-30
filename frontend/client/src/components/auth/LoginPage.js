@@ -28,7 +28,7 @@ const LoginPage = observer(() => {
         onSubmit: (values => {
             userStore?.login(values.email, values.password)
                 .then(() => {
-                    navigate("/personalAccount")
+                    navigate("/")
                 })
         })
     })
