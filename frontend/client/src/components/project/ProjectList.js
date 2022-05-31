@@ -17,7 +17,10 @@ const ProjectList = observer(() => {
 
     useEffect(() => {
         projectStore.getOpenProjects()
-            .then(r => setProjectList(r.data))
+            .then(r => {
+                setProjectList(r.data)
+                console.log(r.data)
+            })
             .catch(r => console.log(r))
     }, [])
 

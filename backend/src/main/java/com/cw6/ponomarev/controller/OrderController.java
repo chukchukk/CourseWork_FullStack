@@ -1,5 +1,7 @@
 package com.cw6.ponomarev.controller;
 
+import com.cw6.ponomarev.model.dto.ChangeOrderByCreatorDTO;
+import com.cw6.ponomarev.model.dto.ChangeOrderStatusDTO;
 import com.cw6.ponomarev.model.dto.CreateOrderDTO;
 import com.cw6.ponomarev.model.dto.OrderDTO;
 import com.cw6.ponomarev.model.entity.UserEntity;
@@ -33,6 +35,28 @@ public class OrderController {
 	@GetMapping
 	public ResponseEntity<List<OrderDTO>> getAll() {
 		return ResponseEntity.ok(orderService.getAll());
+	}
+
+	@GetMapping("/byUser")
+	public ResponseEntity<List<OrderDTO>> getAllUserOrders(@AuthenticationPrincipal UserEntity user) {
+		return ResponseEntity.ok(orderService.getAllUserOrders(user));
+	}
+
+	@GetMapping("/byCreator")
+	public ResponseEntity<List<OrderDTO>> getAllCreatorOrders(@AuthenticationPrincipal UserEntity user) {
+		return ResponseEntity.ok(orderService.getAllCreatorOrders(user));
+	}
+
+	@PostMapping("/changeOrderStatus")
+	public ResponseEntity<Void> changeOrderStatus(@RequestBody ChangeOrderStatusDTO dto) {
+		orderService.changeOrderStatus(dto);
+		return ResponseEntity.ok(null);
+	}
+
+	@PostMapping("/changeOrderByCreator")
+	public ResponseEntity<Void> changeOrderByCreator(@RequestBody ChangeOrderByCreatorDTO dto) {
+		orderService.changeOrderFields(dto);
+		return ResponseEntity.ok(null);
 	}
 
 }

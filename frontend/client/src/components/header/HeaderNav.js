@@ -5,7 +5,6 @@ import {useContext} from "react";
 import {Context} from "../../index";
 import {useNavigate} from "react-router";
 import CreateProject from "../project/CreateProject";
-import CreateOrder from "../order/CreateOrder";
 
 export default function HeaderNav () {
     const {userStore} = useContext(Context)
@@ -28,7 +27,13 @@ export default function HeaderNav () {
                                         <NavDropdown.Item as={CreateProject} />
                                         <NavDropdown.Item as={Link} to="/projects">Список проектов</NavDropdown.Item>
                                     </NavDropdown>
-                                    <Nav.Link as={Link} to="/orders">Список задач</Nav.Link>
+                                    <NavDropdown
+                                        title="Задачи"
+                                        menuVariant="dark"
+                                    >
+                                        <NavDropdown.Item as={Link} to="/createdOrders">Созданные задачи</NavDropdown.Item>
+                                        <NavDropdown.Item as={Link} to="/orders">Список задач</NavDropdown.Item>
+                                    </NavDropdown>
                                 </Nav>
                                 : null
                         }

@@ -14,29 +14,29 @@ import java.util.Set;
 @NoArgsConstructor
 public class OrderDTO {
 
-	private Long id;//
+	private Long id;
 
-	private String title;//
+	private String title;
 
-	private Long priority;//
+	private Long priority;
 
-	private OrderType type;//
+	private OrderType type;
 
-	private OrderStatus status;//
+	private OrderStatus status;
 
-	private String inVersion;//
+	private String inVersion;
 
-	private String description;//
+	private String description;
 
-	private LocalDateTime createdDate;//
+	private LocalDateTime createdDate;
 
-	private LocalDateTime updatedDate;//
+	private LocalDateTime updatedDate;
 
-	private UserDTO creatorUser;//
+	private UserDTO creatorUser;
 
-	private UserDTO worksUser;//
+	private UserDTO worksUser;
 
-	private ProjectDTO project;//
+	private ProjectDTO project;
 
 	private Set<OrderStatus> availableStatuses;
 

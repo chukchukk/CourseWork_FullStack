@@ -18,6 +18,7 @@
     "react-bootstrap": "^2.3.0",
     "react-browser-router": "^2.1.2",
     "react-dom": "^18.0.0",
+    "react-error-boundary": "^3.1.4",
     "react-history": "^0.18.2",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",

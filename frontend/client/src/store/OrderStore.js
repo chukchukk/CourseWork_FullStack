@@ -18,4 +18,20 @@ export default class OrderStore {
     getAllOrders() {
         return OrderService.getAllOrders()
     }
+
+    getUserOrders() {
+        return OrderService.getUserOrders()
+    }
+
+    getCreatorOrders() {
+        return OrderService.getCreatorOrders()
+    }
+
+    changeOrderStatus(orderId, status) {
+        return OrderService.changeOrderStatus(orderId, status)
+    }
+
+    changeOrderByCreator(orderId, title, priority, inVersion, description, worksUserId) {
+        return OrderService.changeOrderByCreator(orderId, title, priority, inVersion, description, worksUserId)
+    }
 }

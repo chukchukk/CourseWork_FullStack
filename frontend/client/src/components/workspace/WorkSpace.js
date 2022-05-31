@@ -202,7 +202,7 @@ const WorkSpace = observer(() => {
                                             selectedProject.users.map(user => (
                                                 <div className={'d-flex justify-content-between bd-highlight mb-2'}>
                                                     <p>
-                                                        - {user.fullName}
+                                                        - {user.fullName + ' (' + user.email + ')'}
                                                     </p>
                                                     {
                                                         currentUser.id === user.id ?
