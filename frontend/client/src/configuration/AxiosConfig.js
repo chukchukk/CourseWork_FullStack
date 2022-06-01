@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const backendHost = "http://localhost:8081"
+export const backendHost = "https://cw6dponomarevbackend.herokuapp.com"
 
 const $api = axios.create({
     withCredentials: false,
